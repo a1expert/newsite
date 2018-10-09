@@ -23,6 +23,8 @@ $assets = \Bitrix\Main\Page\Asset::getInstance();
 		$assets->addJS('/local/assets/scripts/jquery.counterup.js');
 		$assets->addJS('https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js');
 		$assets->addJS('/local/assets/scripts/main.js');
+		$assets->addJS('/local/assets/scripts/main.js');
+
         ?>
         <link href="/local/assets/images/favicon.ico" rel="icon" type="image/ico">
 		<script src='https://www.google.com/recaptcha/api.js' async></script>
