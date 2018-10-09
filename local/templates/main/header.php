@@ -15,8 +15,6 @@ $assets = \Bitrix\Main\Page\Asset::getInstance();
         $assets->addString('<meta http-equiv="X-UA-Compatible" content="IE=edge">');
         //CSS
         $assets->addCss('https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;amp;subset=cyrillic');
-        $assets->addCss('https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/css/swiper.min.css');
-        $assets->addCss('https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css');
         $assets->addCss('/local/assets/styles/fonts.css');
 		$assets->addCss('/local/assets/styles/app.min.css');
 		//SCRIPTS
