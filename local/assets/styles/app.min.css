@@ -2582,9 +2582,9 @@ table {
   position: relative;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[8];
+  -ms-grid-columns: (1fr);
       grid-template-columns: repeat(8, 1fr);
-  -ms-grid-rows: (1fr)[5];
+  -ms-grid-rows: (1fr);
       grid-template-rows: repeat(5, 1fr);
   min-height: 340px;
   border-top: 1px solid #d3d3d3;
@@ -4396,7 +4396,7 @@ table {
   .portfolioPreview__grid {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[3];
+    -ms-grid-columns: (1fr);
         grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, auto);
     -ms-grid-rows: auto auto;
@@ -6075,7 +6075,7 @@ table {
   display: grid;
   -ms-grid-columns: 5fr 1fr;
       grid-template-columns: 5fr 1fr;
-  -ms-grid-rows: (auto)[2];
+  -ms-grid-rows: (auto);
       grid-template-rows: repeat(2, auto);
   -ms-grid-columns: 5fr 25px 1fr;
   grid-column-gap: 25px;
