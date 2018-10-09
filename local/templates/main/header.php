@@ -22,7 +22,6 @@ $assets = \Bitrix\Main\Page\Asset::getInstance();
 		$assets->addJS('https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js');
 		$assets->addJS('https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js');
 		$assets->addJS('/local/assets/scripts/jquery.counterup.js');
-		$assets->addJS('https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/js/swiper.min.js');
 		$assets->addJS('https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js');
 		$assets->addJS('/local/assets/scripts/main.js');
         ?>
