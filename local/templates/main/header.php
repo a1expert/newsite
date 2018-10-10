@@ -64,7 +64,7 @@ $assets = \Bitrix\Main\Page\Asset::getInstance();
 		</div>
 		<header class="header">
 			<div class="header__wrapper">
-				<div class="js_mobileMenu">
+				<nav class="js_mobileMenu">
 					<?$APPLICATION->IncludeComponent(
 						"bitrix:menu",
 						"top",
@@ -83,7 +83,7 @@ $assets = \Bitrix\Main\Page\Asset::getInstance();
 						null,
 						array("HIDE_ICONS" => "Y")
 					);?>
-				</div>
+				</nav>
 			</div>
 			<div class="container">
 				<div class="row middle-xs">
@@ -103,7 +103,7 @@ $assets = \Bitrix\Main\Page\Asset::getInstance();
 							</button>
 						</div>
 					</div>
-					<div class="col-xs-12 col-lg-6 second-lg header__moveLeft js_desktopMenu"></div>
+					<nav class="col-xs-12 col-lg-6 second-lg header__moveLeft js_desktopMenu"></nav>
 				</div>
 			</div>
 		</header>
