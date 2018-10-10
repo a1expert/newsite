@@ -65,39 +65,24 @@ $assets = \Bitrix\Main\Page\Asset::getInstance();
 		<header class="header">
 			<div class="header__wrapper">
 				<div class="js_mobileMenu">
-					<ul class="menu">
-						<li class="menu__item menu__item_dropdown">
-							<a href="#1" class="menu__link menu__link_dropdown">О компании
-								<svg xmlns:xlink="http://www.w3.org/1999/xlink"><use xlink:href="#icon_arrowDown"></use></svg>
-							</a>
-							<div class="menuDropdown">
-								<a href="about.html" class="menuDropdown__link">Подробно о нас</a>
-								<a href="team.html" class="menuDropdown__link">Наша команда</a>
-								<a href="clients.html" class="menuDropdown__link">Клиенты и благодарности</a>
-								<a href="vacancies.html" class="menuDropdown__link">Вакансии</a>
-							</div>
-						</li>
-						<li class="menu__item menu__item_dropdown">
-							<a href="#" class="menu__link menu__link_dropdown">Услуги
-								<svg xmlns:xlink="http://www.w3.org/1999/xlink"><use xlink:href="#icon_arrowDown"></use></svg>
-							</a>
-							<div class="menuDropdown">
-								<a href="service-dev.html" class="menuDropdown__link">Услуги Разработки</a>
-								<a href="service-seo.html" class="menuDropdown__link">Услуги SEO</a>
-								<a href="service-context.html" class="menuDropdown__link">Услуги Контекстной рекламы</a>
-								<a href="service-social.html" class="menuDropdown__link">Услуги Соцсети</a>
-							</div>
-						</li>
-						<li class="menu__item">
-							<a href="portfolio.html" class="menu__link">Портфолио</a>
-						</li>
-						<li class="menu__item">
-							<a href="blog.html" class="menu__link">Блог</a>
-						</li>
-						<li class="menu__item">
-							<a href="contacts.html" class="menu__link">Контакты</a>
-						</li>
-					</ul>
+					<?$APPLICATION->IncludeComponent(
+						"bitrix:menu",
+						"top",
+						Array(
+							"ALLOW_MULTI_SELECT" => "N",
+							"CHILD_MENU_TYPE" => "left",
+							"DELAY" => "N",
+							"MAX_LEVEL" => "2",
+							"MENU_CACHE_GET_VARS" => array(""),
+							"MENU_CACHE_TIME" => "31536000",
+							"MENU_CACHE_TYPE" => "A",
+							"MENU_CACHE_USE_GROUPS" => "Y",
+							"ROOT_MENU_TYPE" => "top",
+							"USE_EXT" => "Y"
+						),
+						null,
+						array("HIDE_ICONS" => "Y")
+					);?>
 				</div>
 			</div>
 			<div class="container">
