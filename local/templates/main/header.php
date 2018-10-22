@@ -62,12 +62,10 @@ $assets = \Bitrix\Main\Page\Asset::getInstance();
 				</div>
 			</form>
 		</div>
-		<header class="header">
+		<header class="header <?if($page == "/about/index.php" || $page == "/about/team.php")echo "header_inverse";?>">
 			<div class="header__wrapper">
 				<nav class="js_mobileMenu">
-					<?$APPLICATION->IncludeComponent(
-						"bitrix:menu",
-						"top",
+					<?$APPLICATION->IncludeComponent("bitrix:menu", "top",
 						Array(
 							"ALLOW_MULTI_SELECT" => "N",
 							"CHILD_MENU_TYPE" => "left",
@@ -79,17 +77,15 @@ $assets = \Bitrix\Main\Page\Asset::getInstance();
 							"MENU_CACHE_USE_GROUPS" => "Y",
 							"ROOT_MENU_TYPE" => "top",
 							"USE_EXT" => "Y"
-						),
-						null,
-						array("HIDE_ICONS" => "Y")
+						), null, array("HIDE_ICONS" => "Y")
 					);?>
 				</nav>
 			</div>
 			<div class="container">
 				<div class="row middle-xs">
 					<div class="col-xs-4 col-sm-2 col-lg-1 first-lg header__moveLeft">
-						<a href="./" class="logo">
-							<img src="assets/images/logo.png" alt="Логотип A1" width="50" height="70" class="logo__image" title="" />
+						<a href="/" class="logo">
+							<img src="/local/assets/images/logo.png" alt="Логотип A1" width="50" height="70" class="logo__image" title="На главную страницу" />
 						</a>
 					</div>
 					<div class="col-xs-8 col-sm-10 col-lg-5 third-lg header__moveRight">
@@ -111,12 +107,7 @@ $assets = \Bitrix\Main\Page\Asset::getInstance();
 		<?if($page !== "/index.php")
 		{?>
 			<div class="container">
-				<ul class="breadcrumbs">
-					<li class="breadcrumbs__item">
-						<a href="/" class="breadcrumbs__link">Главная страница</a>
-					</li>
-					<li class="breadcrumbs__item">Портфолио</li>
-				</ul>
+				<?$APPLICATION->IncludeComponent("bitrix:breadcrumb", "chococrumb", Array("PATH" => "", "SITE_ID" => "s1", "START_FROM" => "0"));?>
 				<h1 class="heading heading_firstLevel heading_uppercase"><?$APPLICATION->ShowTitle(false);?></h1>
 			</div><?
 		}?>
