@@ -5,7 +5,7 @@ $application = Application::getInstance();
 $dir = $APPLICATION->GetCurDir();
 $page = $APPLICATION->GetCurPage();
 $assets = \Bitrix\Main\Page\Asset::getInstance();
-
+$showCrumb = ($page !== "/index.php" || $page !== "/about/index.php" || $page !== "/about/team.php");
 ?>
 <!DOCTYPE html>
 <html lang="<?=LANGUAGE_ID?>">
@@ -104,7 +104,7 @@ $assets = \Bitrix\Main\Page\Asset::getInstance();
 			</div>
 		</header>
 		<main class="main">
-		<?if($page !== "/index.php")
+		<?if($showCrumb)
 		{?>
 			<div class="container">
 				<?$APPLICATION->IncludeComponent("bitrix:breadcrumb", "chococrumb", Array("PATH" => "", "SITE_ID" => "s1", "START_FROM" => "0"));?>
