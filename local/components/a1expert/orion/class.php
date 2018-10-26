@@ -60,7 +60,8 @@ class Orion extends Base
     public function Caching()
     {
         $cache = Bitrix\Main\Data\Cache::createInstance();
-        if ($cache->initCache($cacheTime, $cacheId, $cacheDir))
+        $cacheId = "tc1"; $cacheTime = 300;
+        if ($cache->initCache($cacheTime, $cacheId))
         {
             $this->arResult = $cache->getVars();
         }
